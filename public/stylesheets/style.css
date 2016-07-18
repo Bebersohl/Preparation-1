@@ -1,0 +1,87 @@
+.sort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #B08D8B;
+  padding: 10px;
+}
+
+.search {
+  background: #AFBCB5;
+  padding: 10px;
+}
+
+.container-fluid {
+  margin: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+nav {
+  font: "Helvetica";
+}
+
+nav .navbar-brand {
+  font-size: 26px;
+}
+
+nav li {
+  font-size: 18px;
+}
+
+.card {
+  width: 330px;
+  height: 200px;
+  background: #F7F0E0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  padding: 2px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.card h1 {
+  color: #4A0000;
+  font-family: 'Libre Baskerville', serif;
+  font-variant: small-caps;
+  font-size: 26px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  left: 2px;
+  top: 2px;
+}
+
+.card h6 {
+  color: #000000;
+  font-family: 'Inknut Antiqua', serif;
+  font-style: italic;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  left: 2px;
+  top: 2px;
+}
+
+.card p {
+  color: #000000;
+  font-family: "Georgia";
+  font-size: 14px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 0px;
+}
+
+.card .description {
+  text-indent: 15px;
+}
+
+.card:hover {
+  height: auto;
+  overflow: visible;
+}

@@ -1,0 +1,217 @@
+<<<<<<< HEAD
+.card
+  h1 #{spells[n].name}
+
+  -var r = "";
+  if (spells[n].ritual)
+    -r = "(ritual)";
+
+  if (spells[n].level > 3)
+    h6 #{spells[n].level}th-level #{spells[n].school} #{r}
+  else if (spells[n].level === 2)
+    h6 #{spells[n].level}nd-level #{spells[n].school} #{r}
+  else if (spells[n].level === 1)
+    h6 #{spells[n].level}st-level #{spells[n].school} #{r}
+  else if (spells[n].level === 0)
+    h6 #{spells[n].school} Cantrip #{r}
+  br
+  p
+    b Casting Time:&nbsp;
+    case spells[n].casting_time
+      when 0
+        |1 reaction
+      when 0.5
+        |1 bonus action
+      when 1
+        |1 action
+      when 10
+        |1 minute
+      when 100
+        |10 minutes
+      when 600
+        |1 hour
+      when 4800
+        |8 hours
+      when 7200
+        |12 hours
+      when 14400
+        |24 hours
+      default
+        |#{spells[n].casting_time} rounds
+  p
+    b Range:&nbsp;
+    case spells[n].range
+      when 0
+        |Self
+      when 5
+        |Touch
+      when 5280
+        |1 mile
+      when 2640000
+        |500 miles
+      default
+        |#{spells[n].range} feet
+  p
+    b Components:&nbsp;
+    |#{spells[n].components}&nbsp;
+    if (spells[n].material !== undefined)
+      |(!{spells[n].material})
+  p
+    b Duration:&nbsp;
+    if (spells[n].concentration === true)
+      |Concentration, up to
+    case spells[n].duration
+      when 0
+        |Instantaneous
+      when 1
+        |1 round
+      when 10
+        |1 minute
+      when 100
+        |10 minutes
+      when 600
+        |1 hours
+      when 1200
+        |2 hours
+      when 4800
+        |8 hours
+      when 7200
+        |12 hours
+      when 14400
+        |24 hours
+      when 100800
+        |7 days
+      when 144000
+        |10 days
+      when 432000
+        |30 days
+      when -2
+        |Until dispelled
+      when -1
+        |Special
+      default
+        |#{spells[n].duration} rounds
+  br
+  .description
+    |!{spells[n].desc}
+  br
+  p
+    b Source:&nbsp;
+    |#{spells[n].page}
+  p
+    b Classes:&nbsp;
+    -var o = 0;
+    while o < spells[n].class.length
+      |#{spells[n].class[o]}
+      if ((o+1)!==spells[n].class.length)
+        |,&nbsp;
+      -o++;
+=======
+.card
+  h1 #{spells[n].name}
+
+  -var r = "";
+  if (spells[n].ritual)
+    -r = "(ritual)";
+
+  if (spells[n].level > 3)
+    h6 #{spells[n].level}th-level #{spells[n].school} #{r}
+  else if (spells[n].level === 2)
+    h6 #{spells[n].level}nd-level #{spells[n].school} #{r}
+  else if (spells[n].level === 1)
+    h6 #{spells[n].level}st-level #{spells[n].school} #{r}
+  else if (spells[n].level === 0)
+    h6 #{spells[n].school} Cantrip #{r}
+  br
+  p
+    b Casting Time:&nbsp;
+    case spells[n].casting_time
+      when 0
+        |1 reaction
+      when 0.5
+        |1 bonus action
+      when 1
+        |1 action
+      when 10
+        |1 minute
+      when 100
+        |10 minutes
+      when 600
+        |1 hour
+      when 4800
+        |8 hours
+      when 7200
+        |12 hours
+      when 14400
+        |24 hours
+      default
+        |#{spells[n].casting_time} rounds
+  p
+    b Range:&nbsp;
+    case spells[n].range
+      when 0
+        |Self
+      when 5
+        |Touch
+      when 5280
+        |1 mile
+      when 2640000
+        |500 miles
+      default
+        |#{spells[n].range} feet
+  p
+    b Components:&nbsp;
+    |#{spells[n].components}&nbsp;
+    if (spells[n].material !== undefined)
+      |(!{spells[n].material})
+  p
+    b Duration:&nbsp;
+    if (spells[n].concentration === true)
+      |Concentration, up to
+    case spells[n].duration
+      when 0
+        |Instantaneous
+      when 1
+        |1 round
+      when 10
+        |1 minute
+      when 100
+        |10 minutes
+      when 600
+        |1 hours
+      when 1200
+        |2 hours
+      when 4800
+        |8 hours
+      when 7200
+        |12 hours
+      when 14400
+        |24 hours
+      when 100800
+        |7 days
+      when 144000
+        |10 days
+      when 432000
+        |30 days
+      when -2
+        |Until dispelled
+      when -1
+        |Special
+      default
+        |#{spells[n].duration} rounds
+  br
+  .description
+    |!{spells[n].desc}
+  br
+  p
+    b Source:&nbsp;
+    |#{spells[n].page}
+  p
+    b Classes:&nbsp;
+    -var o = 0;
+    while o < spells[n].class.length
+      |#{spells[n].class[o]}
+      if ((o+1)!==spells[n].class.length)
+        |,&nbsp;
+      -o++;
+>>>>>>> cac6cef050b1a472a9382bdd6396773bc3af74e8

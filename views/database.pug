@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+extends layout
+
+block link
+  -var selected = 'Database';
+
+block content
+  .container-fluid
+    .row.row-eq-height
+      .col-md-3.search
+        include ./partials/sort.pug
+
+      .col-md-9.sort
+        -var n = 0;
+        while n < spells.length
+          include ./partials/spell.pug
+          -n++
+=======
+extends layout
+
+block link
+  -var selected = 'Database';
+
+block content
+  .container-fluid
+    .row.row-eq-height
+      .col-md-3.search
+        include ./partials/sort.pug
+
+      .col-md-9.sort
+        -var n = 0;
+        while n < spells.length
+          include ./partials/spell.pug
+          -n++
+>>>>>>> cac6cef050b1a472a9382bdd6396773bc3af74e8

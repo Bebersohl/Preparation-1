@@ -1,0 +1,21 @@
+{
+  "name": "preparation",
+  "version": "1.0.0",
+  "description": "A node.js application that helps players track preparation in fifth edition D&D",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "lodash": "^4.13.1",
+    "mongoose": "^4.5.4",
+    "node-sass": "^3.8.0",
+    "pug": "^2.0.0-beta3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Ebersohl",
+  "license": "ISC"
+}
